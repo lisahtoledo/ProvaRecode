@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Catálogo de Remédios</title>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" src="src/styles.css" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <style>
+        body {
+            background-color: #383538F2;;
+            background-size: 100%;       
+        }
+
+        #mainNav {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            background-color: #ffffffE6;
+            transition: background-color 0.2s ease;
+            list-style: none;
+            position: absolute;
+            height: 134.58px;
+            left: -11px;
+            right: 0px;
+            top: calc(0% - 174.58px/2 + 108.79px);
+            overflow: hidden;
+        }
+
+        a {
+            font-size: 20px;
+            font-family: 'Merriweather Sans';
+            font-style: normal;
+        } 
+
+        li {
+            display: inline;
+            padding: 38px;
+        }
+
+
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+      <div class="container">
+        <img class="imglogo" src="static/img/Logo.png""/>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/pedidos">pedidos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/login">login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/">voltar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+    <div id="app" class="table-wrapper">
+      <table id="admTable" class="table table-hovered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome do Remédio</th>
+                <th scope="col">Laboratório</th>
+                <th scope="col">Dosagem</th>
+                <th scope="col">Preço</th>
+            </tr>
+        </thead>
+        <tbody class="remedios"> 
+            <% for(let i=0; i < remedios.length; i++) { %>
+                <tr class="remedio">
+                    <td><%= remedios[i].id %></td>
+                    <td><%= remedios[i].nome %></td>
+                    <td><%= remedios[i].laboratorio %></td>
+                    <td><%= remedios[i].quant_mg %></td>
+                    <td><%= remedios[i].preco %></td>
+                 </tr>   
+            <% } %>  
+        </tbody>
+    </table>
+    </div>
+
+      
+	    <!-- Configuração do JS, JQuery e Popper do BootStrap no Projeto-->
+	  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
